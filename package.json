@@ -1,0 +1,12 @@
+{
+  "name": "selfmademoney-plan-v6",
+  "version": "1.0.0",
+  "description": "SelfMadeMoney Plan V6 - Complete Business System",
+  "main": "index.html",
+  "scripts": {
+    "start": "echo 'Open index.html in browser'"
+  },
+  "keywords": ["business", "money", "automation", "ai", "ebook"],
+  "author": "Myeportal",
+  "license": "Commercial"
+}

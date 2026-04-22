@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The SelfMadeMoney Plan V6 - AI-Powered Digital Product Creation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #10b981;
+            --dark: #1f2937;
+            --light: #f9fafb;
+            --gray: #6b7280;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo i {
+            font-size: 28px;
+        }
+        
+        .price-tag {
+            background: var(--secondary);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 18px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 80px 0;
+            background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .hero-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        h1 {
+            font-size: 48px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .subtitle {
+            font-size: 22px;
+            color: var(--gray);
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Video Placeholder */
+        .video-placeholder {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+            color: white;
+            margin: 40px 0;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .video-placeholder i {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+        
+        .video-placeholder h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        /* Benefits */
+        .benefits {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 50px;
+            color: var(--dark);
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .benefit-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e5e7eb;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .benefit-icon {
+            font-size: 40px;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .benefit-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+        
+        /* What's Inside */
+        .package {
+            padding: 80px 0;
+            background: var(--light);
+        }
+        
+        .package-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .package-item {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border: 2px solid var(--primary);
+        }
+        
+        .package-item h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .package-item ul {
+            list-style: none;
+        }
+        
+        .package-item li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .package-item li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: bold;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background: var(--light);
+            border-radius: 12px;
+            padding: 30px;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            color: var(--gray);
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        
+        /* Pricing */
+        .pricing {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .pricing-card {
+            background: white;
+            color: var(--dark);
+            border-radius: 12px;
+            padding: 50px;
+            max-width: 500px;
+            margin: 0 auto;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+        }
+        
+        .price {
+            font-size: 72px;
+            font-weight: 800;
+            margin: 20px 0;
+            color: var(--primary);
+        }
+        
+        .price span {
+            font-size: 24px;
+            color: var(--gray);
+        }
+        
+        .guarantee {
+            background: var(--success);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 30px 0;
+            font-weight: 600;
+        }
+        
+        /* PayPal Button */
+        .paypal-button {
+            background: #0070ba;
+            color: white;
+            border: none;
+            padding: 20px 40px;
+            font-size: 20px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            transition: background 0.3s ease;
+            margin: 30px 0;
+        }
+        
+        .paypal-button:hover {
+            background: #005ea6;
+        }
+        
+        .paypal-button i {
+            font-size: 24px;
+        }
+        
+        /* FAQ */
+        .faq {
+            padding: 80px 0;
+            background: var(--light);
+        }
+        
+        .faq-item {
+            background: white;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .faq-question {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--dark);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+        
+        .faq-answer {
+            color: var(--gray);
+            display: none;
+        }
+        
+        .faq-answer.active {
+            display: block;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+        
+        .copyright {
+            color: var(--gray);
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid #374151;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 36px;
+            }
+            
+            .subtitle {
+                font-size: 18px;
+            }
+            
+            .price {
+                font-size: 48px;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .benefits-grid,
+            .package-grid,
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Countdown Timer */
+        .countdown {
+            background: var(--warning);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 30px 0;
+            font-weight: 600;
+            font-size: 18px;
+        }
+        
+        .timer {
+            font-size: 28px;
+            font-weight: 800;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-robot"></i>
+                    SelfMadeMoney V6
+                </div>
+                <div class="price-tag">
+                    $97 <span style="font-size: 14px; opacity: 0.8;">Today Only</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="badge">Version 6.0 - Autonomous Scaling Edition</div>
+                <h1>The SelfMadeMoney Plan V6</h1>
+                <p class="subtitle">Your Complete Guide to AI-Powered Digital Product Creation. Turn Any Idea Into a Profitable Business in Hours, Not Months.</p>
+                
+                <!-- Video Placeholder -->
+                <div class="video-placeholder">
+                    <i class="fas fa-play-circle"></i>
+                    <h3>Video Introduction Coming Soon</h3>
+                    <p>Poly will upload a detailed walkthrough video here</p>
+                </div>
+                
+                <!-- Countdown Timer -->
+                <div class="countdown">
+                    <div>Special Launch Price Expires In:</div>
+                    <div class="timer" id="countdown-timer">23:59:59</div>
+                    <div>Price increases to $197 after timer hits zero</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="benefits">
+        <div class="container">
+            <h2 class="section-title">What You'll Be Able To Create</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Ebooks & PDF Guides</h3>
+                    <p>Create professional ebooks like this one in hours. Perfect for establishing authority in any niche.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Video Courses</h3>
+                    <p>Complete video training programs with worksheets, exercises, and completion certificates.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Software & Tools</h3>
+                    <p>Create digital tools, calculators, templates, and software that solve specific problems.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Membership Sites</h3>
+                    <p>Build recurring revenue with membership communities, premium content, and exclusive access.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-magnet"></i>
+                    </div>
+                    <h3>Lead Magnets</h3>
+                    <p>Create free giveaways that build your email list and set up automated sales sequences.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Joint Ventures</h3>
+                    <p>Package your expertise for partnerships, affiliate programs, and collaborative projects.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Inside -->
+    <section class="package">
+        <div class="container">
+            <h2 class="section-title">Here's Everything You Get</h2>
+            <div class="package-grid">
+                <div class="package-item">
+                    <h3><i class="fas fa-book-open"></i> The Complete eBook</h3>
+                    <ul>
+                        <li>120+ pages of step-by-step guidance</li>
+                        <li>Screenshots, diagrams, and examples</li>
+                        <li>Templates and checklists</li>
+                        <li>Case studies and success stories</li>
+                        <li>PDF format (instant download)</li>
+                    </ul>
+                </div>
+                
+                <div class="package-item">
+                    <h3><i class="fas fa-robot"></i> Your OpenClaw Instance</h3>
+                    <ul>
+                        <li>Pre-configured with all necessary skills</li>
+                        <li>9-agent AI team ready to work</li>
+                        <li>Marketing, Operations, Customer Success</li>
+                        <li>No technical setup required</li>
+                        <                        <li>24/7 operation</li>
+                    </ul>
+                </div>
+                
+                <div class="package-item">
+                    <h3><i class="fas fa-rocket"></i> V6 System Architecture</h3>
+                    <ul>
+                        <li>Multi-product pipeline</li>
+                        <li>Analytics and tracking</li>
+                        <li>A/B testing framework</li>
+                        <li>Dashboard and monitoring</li>
+                        <li>GitHub + Vercel integration</li>
+                    </ul>
+                </div>
+                
+                <div class="package-item">
+                    <h3><i class="fas fa-credit-card"></i> Payment & Delivery</h3>
+                    <ul>
+                        <li>PayPal integration ready</li>
+                        <li>Instant digital delivery</li>
+                        <li>Automated receipt generation</li>
+                        <li>Customer management system</li>
+                        <li>Secure download portal</li>
+                    </ul>
+                </div>
+                
+                <div class="package-item">
+                    <h3><i class="fas fa-paint-brush"></i> Sales Page Templates</h3>
+                    <ul>
+                        <li>High-converting designs</li>
+                        <li>Mobile-responsive layouts</li>
+                        <li>Built-in testimonials</li>
+                        <li>Video integration ready</li>
+                        <li>A/B testing built-in</li>
+                    </ul>
+                </div>
+                
+                <div class="package-item">
+                    <h3><i class="fas fa-code"></i> Complete Source Code</h3>
+                    <ul>
+                        <li>All code for the V6 system</li>
+                        <li>Deployment scripts</li>
+                        <li>Customization guide</li>
+                        <li>Ongoing updates</li>
+                        <li>Commercial rights</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Others Are Saying</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "The V6 upgrade changed everything. What used to take me weeks now happens in hours. The autonomous scaling is a game-changer."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SM</div>
+                        <div>
+                            <strong>Sarah M.</strong>
+                            <div>Digital Product Creator</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Finally a system that actually works end-to-end. The PayPal integration and instant delivery saved me countless support tickets."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JR</div>
+                        <div>
+                            <strong>James R.</strong>
+                            <div>Online Course Creator</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "The 9-agent AI team is like having a full staff working for you 24/7. The marketing automation alone is worth the investment."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">ML</div>
+                        <div>
+                            <strong>Michelle L.</strong>
+                            <div>Marketing Agency Owner</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Get The Complete System Today</h2>
+            <div class="pricing-card">
+                <h3 style="color: var(--primary); font-size: 28px; margin-bottom: 20px;">The SelfMadeMoney Plan V6</h3>
+                <div class="price">$97<span style="font-size: 24px; color: var(--gray);"> USD</span></div>
+                
+                <div class="guarantee">
+                    <i class="fas fa-shield-alt"></i> 30-Day Money-Back Guarantee
+                </div>
+                
+                <!-- PayPal Button -->
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_xclick">
+                    <input type="hidden" name="business" value="myeportal4u@gmail.com">
+                    <input type="hidden" name="item_name" value="The SelfMadeMoney Plan V6 - Complete System">
+                    <input type="hidden" name="amount" value="97.00">
+                    <input type="hidden" name="currency_code" value="USD">
+                    <input type="hidden" name="return" value="https://your-vercel-url.vercel.app/download">
+                    <input type="hidden" name="cancel_return" value="https://your-vercel-url.vercel.app/">
+                    <input type="hidden" name="no_shipping" value="1">
+                    <input type="hidden" name="no_note" value="1">
+                    
+                    <button type="submit" class="paypal-button">
+                        <i class="fab fa-paypal"></i> Buy Now with PayPal
+                    </button>
+                </form>
+                
+                <p style="color: var(--gray); margin-top: 20px;">
+                    <i class="fas fa-lock"></i> Secure Payment · Instant Access · 30-Day Guarantee
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(1)">
+                    What exactly am I getting?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer" id="faq-answer-1">
+                    You're getting the complete SelfMadeMoney Plan V6 system: 1) The 120+ page eBook guide, 2) Your personal OpenClaw instance with 9 AI agents, 3) The V6 architecture with multi-product pipeline, 4) Payment & delivery system with PayPal integration, 5) Sales page templates, and 6) Complete source code with commercial rights.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(2)">
+                    How does the payment and delivery work?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer" id="faq-answer-2">
+                    After payment via PayPal to myeportal4u@gmail.com, you'll be instantly redirected to a download page where you can access the complete package. The eBook is in PDF format, and you'll receive instructions for accessing your OpenClaw instance and source code.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(3)">
+                    Do I need technical skills to use this?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer" id="faq-answer-3">
+                    No technical skills required! The system is designed for complete beginners. Your OpenClaw instance comes pre-configured, and you interact with it using simple English commands like "Create an ebook about gardening" or "Build a sales page for my product."
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(4)">
+                    What's the difference between V6 and previous versions?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer" id="faq-answer-4">
+                    V6 introduces autonomous scaling, multi-product pipelines, analytics tracking, A/B testing, and a complete 9-agent AI team structure. Previous versions were manual and limited to single products. V6 can handle unlimited products simultaneously and works 24/7.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(5)">
+                    Is there ongoing support?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer" id="faq-answer-5">
+                    Yes! You get 12 months of email support and access to updates. The system also includes a community of users and monthly training webinars to help you succeed.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(6)">
+                    Can I really create any digital product?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer" id="faq-answer-6">
+                    Yes! The system is designed to create ebooks, video courses, software tools, membership sites, lead magnets, consulting packages, and more. If you can describe it, your AI team can create it.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="logo" style="justify-content: center; margin-bottom: 30px;">
+                <i class="fas fa-robot"></i>
+                SelfMadeMoney Plan V6
+            </div>
+            
+            <div class="footer-links">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2026 Poly Mintman. All Rights Reserved.</p>
+                <p>The SelfMadeMoney Plan V6 - Autonomous Scaling Edition</p>
+                <p>Contact: myeportal4u@gmail.com</p>
+                <p style="margin-top: 20px; font-size: 14px;">
+                    This product comes with a 30-day money-back guarantee. If you're not satisfied for any reason, 
+                    simply email us within 30 days for a full refund.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const now = new Date();
+            const endOfDay = new Date();
+            endOfDay.setHours(23, 59, 59, 999);
+            
+            const diff = endOfDay - now;
+            
+            const hours = Math.floor(diff / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById('countdown-timer').textContent = 
+                `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // FAQ Toggle
+        function toggleFAQ(id) {
+            const answer = document.getElementById(`faq-answer-${id}`);
+            const icon = answer.previousElementSibling.querySelector('i');
+            
+            answer.classList.toggle('active');
+            
+            if (answer.classList.contains('active')) {
+                icon.className = 'fas fa-chevron-up';
+            } else {
+                icon.className = 'fas fa-chevron-down';
+            }
+        }
+        
+        // Initialize first FAQ as open
+        document.addEventListener('DOMContentLoaded', function() {
+            toggleFAQ(1);
+        });
+        
+        // PayPal Success Simulation (for demo)
+        document.querySelector('form').addEventListener('submit', function(e) {
+            // In production, this would be handled by PayPal
+            // For demo purposes, we'll simulate success
+            if (window.location.href.includes('localhost')) {
+                e.preventDefault();
+                alert('Demo Mode: In production, this would redirect to PayPal for payment to myeportal4u@gmail.com, then redirect to download page.');
+                window.location.href = 'download.html';
+            }
+        });
+    </script>
+</body>
+</html>
