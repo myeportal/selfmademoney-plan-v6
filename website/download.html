@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Your SelfMadeMoney Plan V6</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #10b981;
+            --dark: #1f2937;
+            --light: #f9fafb;
+            --gray: #6b7280;
+            --success: #10b981;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .download-container {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            max-width: 800px;
+            width: 100%;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        
+        .success-icon {
+            font-size: 80px;
+            color: var(--success);
+            margin-bottom: 30px;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        h1 {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+        
+        .subtitle {
+            font-size: 20px;
+            color: var(--gray);
+            margin-bottom: 40px;
+        }
+        
+        .download-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .download-item {
+            background: var(--light);
+            border-radius: 12px;
+            padding: 30px;
+            border: 2px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+        
+        .download-item:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .item-icon {
+            font-size: 40px;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .item-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+        
+        .download-button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: background 0.3s ease;
+            text-decoration: none;
+            margin-top: 15px;
+        }
+        
+        .download-button:hover {
+            background: var(--primary-dark);
+        }
+        
+        .instructions {
+            background: #f0f9ff;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px 0;
+            text-align: left;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .instructions h3 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .instructions ol {
+            padding-left: 20px;
+        }
+        
+        .instructions li {
+            margin-bottom: 15px;
+            padding-left: 10px;
+        }
+        
+        .receipt {
+            background: #f0fdf4;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 30px 0;
+            border: 2px solid var(--success);
+        }
+        
+        .receipt h3 {
+            color: var(--success);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .receipt-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            text-align: left;
+        }
+        
+        .receipt-item {
+            padding: 10px 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .receipt-label {
+            font-weight: 600;
+            color: var(--gray);
+        }
+        
+        .receipt-value {
+            color: var(--dark);
+        }
+        
+        .support {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #e5e7eb;
+        }
+        
+        .support a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .support a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .download-container {
+                padding: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 32px;
+            }
+            
+            .download-items {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="download-container">
+        <div class="success-icon">
+            <i class="fas fa-check-circle"></i>
+        </div>
+        
+        <h1>🎉 Thank You For Your Purchase!</h1>
+        <p class="subtitle">Your SelfMadeMoney Plan V6 is ready for download. Here's everything you get:</p>
+        
+        <div class="download-items">
+            <div class="download-item">
+                <div class="item-icon">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="item-title">The Complete eBook</div>
+                <p>120+ page PDF guide with everything you need</p>
+                <a href="../ebook/SelfMadeMoney-Plan-V6-Professional.pdf" class="download-button" download="SelfMadeMoney-Plan-V6.pdf">
+                    <i class="fas fa-download"></i> Download PDF (Professional Edition)
+                </a>
+            </div>
+            
+            <div class="download-item">
+                <div class="item-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="item-title">OpenClaw Access</div>
+                <p>Your personal AI instance with 9-agent team</p>
+                <a href="#" class="download-button" onclick="accessOpenClaw()">
+                    <i class="fas fa-external-link-alt"></i> Access Now
+                </a>
+            </div>
+            
+            <div class="download-item">
+                <div class="item-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="item-title">Source Code</div>
+                <p>Complete V6 system code and deployment scripts</p>
+                <a href="https://github.com/myeportal/selfmademoney-plan-v6" target="_blank" class="download-button">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+            </div>
+        </div>
+        
+        <div class="instructions">
+            <h3><i class="fas fa-play-circle"></i> Quick Start Instructions</h3>
+            <ol>
+                <li><strong>Download the eBook</strong> - Read through the complete guide first</li>
+                <li><strong>Access your OpenClaw</strong> - Log in to your personal AI instance</li>
+                <li><strong>Explore the V6 system</strong> - Review the dashboard and features</li>
+                <li><strong>Create your first product</strong> - Use simple commands like "Create an ebook about [your topic]"</li>
+                <li><strong>Deploy your sales page</strong> - Use the built-in Vercel integration</li>
+                <li><strong>Start selling</strong> - Your PayPal integration is already set up</li>
+            </ol>
+        </div>
+        
+        <div class="receipt">
+            <h3><i class="fas fa-receipt"></i> Purchase Receipt</h3>
+            <div class="receipt-details">
+                <div class="receipt-item">
+                    <div class="receipt-label">Product:</div>
+                    <div class="receipt-value">SelfMadeMoney Plan V6</div>
+                </div>
+                <div class="receipt-item">
+                    <div class="receipt-label">Amount Paid:</div>
+                    <div class="receipt-value">$97.00 USD</div>
+                </div>
+                <div class="receipt-item">
+                    <div class="receipt-label">Payment Method:</div>
+                    <div class="receipt-value">PayPal (myeportal4u@gmail.com)</div>
+                </div>
+                <div class="receipt-item">
+                    <div class="receipt-label">Purchase Date:</div>
+                    <div class="receipt-value" id="purchase-date">Loading...</div>
+                </div>
+                <div class="receipt-item">
+                    <div class="receipt-label">Order ID:</div>
+                    <div class="receipt-value" id="order-id">SMMV6-${Date.now().toString().slice(-8)}</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="support">
+            <p><i class="fas fa-envelope"></i> Need help? Email us at: <a href="mailto:myeportal4u@gmail.com">myeportal4u@gmail.com</a></p>
+            <p><i class="fas fa-shield-alt"></i> Remember: You're protected by our 30-day money-back guarantee</p>
+            <p style="margin-top: 20px; font-size: 14px; color: var(--gray);">
+                A confirmation email has been sent to your PayPal email address with these details.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Set purchase date
+        document.getElementById('purchase-date').textContent = new Date().toLocaleDateString('en-US', {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit'
+        });
+        
+        // Generate order ID
+        document.getElementById('order-id').textContent = 'SMMV6-' + Date.now().toString().slice(-8);
+        
+        // Download function
+        function downloadFile(type) {
+            if (type === 'ebook') {
+                // This will trigger the download via the link's download attribute
+                console.log('Downloading SelfMadeMoney Plan V6 PDF');
+                
+                // Track download in SMM v6
+                fetch('http://localhost:3002/execute', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        action: "track",
+                        payload: {
+                            event: "ebook_downloaded",
+                            department: "customer_success",
+                            agent: "Support Agent",
+                            timestamp: new Date().toISOString(),
+                            file: "SelfMadeMoney-Plan-V6-Professional.pdf",
+                            version: "6.0",
+                            customer_id: localStorage.getItem('smmv6_customer_id') || 'unknown'
+                        }
+                    })
+                }).catch(() => {
+                    // Silently fail if analytics not available
+                });
+                
+                // Also track in email automation system if running
+                const customerId = localStorage.getItem('smmv6_customer_id');
+                if (customerId) {
+                    fetch('http://localhost:3003/track-download', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ customer_id: customerId })
+                    }).catch(() => {
+                        // Email automation server might not be running
+                    });
+                }
+            }
+        }
+        
+        function accessOpenClaw() {
+            alert('In production, this would redirect to your personal OpenClaw instance.\n\nFor now, you can access the SMM v6 system at: http://localhost:3002/dashboard');
+        }
+        
+        // Auto-save receipt
+        function saveReceipt() {
+            const receipt = {
+                product: 'SelfMadeMoney Plan V6',
+                amount: '$97.00 USD',
+                date: document.getElementById('purchase-date').textContent,
+                orderId: document.getElementById('order-id').textContent,
+                email: 'myeportal4u@gmail.com'
+            };
+            
+            localStorage.setItem('smmv6_receipt', JSON.stringify(receipt));
+            console.log('Receipt saved to localStorage');
+        }
+        
+        // Save receipt on page load
+        document.addEventListener('DOMContentLoaded', saveReceipt);
+    </script>
+</body>
+</html>
