@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "name": "selfmademoney-plan-v6",
+  "public": true,
+  "builds": [
+    {
+      "src": "*.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/download",
+      "dest": "/download.html"
+    }
+  ],
+  "env": {
+    "PAYPAL_EMAIL": "myeportal4u@gmail.com",
+    "PRODUCT_NAME": "SelfMadeMoney Plan V6",
+    "PRODUCT_PRICE": "97",
+    "CURRENCY": "USD"
+  }
+}
